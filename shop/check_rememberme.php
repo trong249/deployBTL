@@ -2,11 +2,11 @@
 
 
 if (!isset($_SESSION["loggedin"]) && isset($_COOKIE["user_login"])) {
-    $hostname = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "data_ishine";
-
+    $hostname = "mysql5037.site4now.net";
+    $username = "a7cc8e_dapoet1";
+    $password = "n24v9t2001";
+    $database = "db_a7cc8e_dapoet1";
+    // $sql=mysqli_connect("mysql5037.site4now.net","a7cc8e_dapoet1","n24v9t2001","db_a7cc8e_dapoet1");
     $conn = mysqli_connect($hostname, $username, $password, $database);
 
     if (!$conn) {

@@ -1,6 +1,6 @@
 <?php
 
-    $sql=mysqli_connect("localhost","root","","data_ishine");
+    $sql=mysqli_connect("mysql5037.site4now.net","a7cc8e_dapoet1","n24v9t2001","db_a7cc8e_dapoet1");
 /****************************************************************************************/  
 
     if(isset($_REQUEST['user'])){
