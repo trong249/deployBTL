@@ -1,0 +1,51 @@
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px)  {
+    p {
+        font-size: 14px;
+    }
+    .content1 .text {
+        padding-top: 20px;
+    }
+    .content2 .text {
+        padding-top: 30px;
+    }
+    .content3 .text {
+        padding-top: 70px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .content1 .column {
+        width: 100%;
+    }
+    .content1 .text {
+        padding: 20px;
+    }
+    
+    .content2 .column {
+        width: 100%;
+    }
+    .content2 .text {
+        padding: 30px;
+    }
+    
+    .content3 .column {
+        width: 100%;
+    }
+    .content3 .pic {
+        text-align: center;
+    }
+    .content3 .pic img {
+        width: 60%;
+    }
+    .content3 .text {
+        padding: 20px;
+    }
+}
