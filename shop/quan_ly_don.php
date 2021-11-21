@@ -14,7 +14,7 @@
     }
     $arr_don_hang=array_filter($arr,"getDon");
     
-/****************************************************************************************/ 
+/****************************************************************************************/
     function getDon($don){
         return $don['user']==$GLOBALS['user'];
     }
@@ -117,11 +117,12 @@
                         $date=$don_hang['date'];
                         $status=getStatusText($don_hang['tinh_trang']);
                         $statusId=getStatusId($don_hang['tinh_trang']);
+                        $username=$GLOBALS['user'];
                         echo " <tr>
                                     <td>$ma_don</td>
                                     <td>$date</td>
                                     <td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"$statusId\">$status</button></td>
-                                    <td><a href=\"chi_tiet_don_hang.php?ma_don=$ma_don\" class=\"btn btn-outline-info btn-sm\" role=\"button\">Chi tiết</a></td>
+                                    <td><a href=\"chi_tiet_don_hang.php?ma_don=$ma_don&user=$user\" class=\"btn btn-outline-info btn-sm\" role=\"button\">Chi tiết</a></td>
                                     <td>-</td>
                                 </tr>";
                     }
