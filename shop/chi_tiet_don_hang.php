@@ -157,7 +157,7 @@
                     </tbody>
                 </table>
             </div>
-            <a href="quan_ly_don.php?<?php echo "user=$user"; ?>"><button class="btn btn-danger">Danh sách đơn hàng</button></a>
+            <a href="quan_ly_don.php?user=<?php echo $user ?>"><button class="btn btn-danger">Danh sách đơn hàng</button></a>
 		</div>
             </div>
          <!-- /. PAGE WRAPPER  -->
