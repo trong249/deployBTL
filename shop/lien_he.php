@@ -1,3 +1,4 @@
+<!-- command -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
             <div class="col-md-6">
                 <div class="lienhe">
                     <h6>THÔNG TIN LIÊN HỆ</h6>
-
+                    <!-- comment chút thử -->
                     <table class="tus">
                         <tr>
                             <td> <img src="/img/lien_he/dia_chi.png" alt=""> </td>

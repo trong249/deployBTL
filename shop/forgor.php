@@ -28,7 +28,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //setup a connection
-        $hostname = "mysql5037.site4now.net";
+        $hostname = "mysql.site4now.net";
     $username = "a7cc8e_dapoet1";
     $password = "123456aA@";
     $database = "db_a7cc8e_dapoet1";
@@ -121,7 +121,7 @@
                     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                     $mail->Username   = 'satoukazuma.clone@gmail.com';                     //SMTP username
-                    $mail->Password   = 'doraemon12!3';                               //SMTP password
+                    $mail->Password   = 'dhihcsupdexkpqhi';                               //SMTP app password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
                     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                     $mail->CharSet = 'UTF-8';
