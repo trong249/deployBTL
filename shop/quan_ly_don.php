@@ -14,7 +14,7 @@
     }
     $arr_don_hang=array_filter($arr,"getDon");
     
-/****************************************************************************************/
+/****************************************************************************************/ 
     function getDon($don){
         return $don['user']==$GLOBALS['user'];
     }
@@ -117,7 +117,6 @@
                         $date=$don_hang['date'];
                         $status=getStatusText($don_hang['tinh_trang']);
                         $statusId=getStatusId($don_hang['tinh_trang']);
-                        $username=$GLOBALS['user'];
                         echo " <tr>
                                     <td>$ma_don</td>
                                     <td>$date</td>

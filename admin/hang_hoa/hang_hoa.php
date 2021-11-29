@@ -4,7 +4,7 @@
 
 <?php
 
-$sql=mysqli_connect("mysql5037.site4now.net","a7cc8e_dapoet1","123456aA@","db_a7cc8e_dapoet1");
+    $sql=mysqli_connect("mysql5037.site4now.net","a7cc8e_dapoet1","123456aA@","db_a7cc8e_dapoet1");
 /****************************************************************************************/  
     $selectData = "SELECT id,ten_hh,hinh,don_gia,giam_gia FROM hang_hoa";
     $row=$sql->query($selectData);
@@ -64,7 +64,7 @@ $sql=mysqli_connect("mysql5037.site4now.net","a7cc8e_dapoet1","123456aA@","db_a7
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/hang_hoa_style.css">
-
+    <link rel="icon" href="../../img/tachnen.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css" /> -->
     <script src="https://kit.fontawesome.com/8f65ebef09.js" crossorigin="anonymous"></script>
 

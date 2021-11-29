@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2021 at 01:17 PM
+-- Generation Time: Nov 29, 2021 at 03:30 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,8 +43,7 @@ INSERT INTO `binh_luan` (`rand`, `id`, `user`, `date`, `noi_dung`) VALUES
 (441, 126, 'admin', '17-11-2021', 'Giày đẹp!'),
 (412, 417, 'trong', '10-1-2021', 'Giày ngon rẻ!'),
 (416, 153, 'admin', '17-11-2021', 'tuyệt vời quá'),
-(643, 153, 'admin', '17-11-2021', 'đã cmt xong :D'),
-(873, 628, 'trong249', '20-11-2021', 'au de');
+(643, 153, 'admin', '17-11-2021', 'đã cmt xong :D');
 
 -- --------------------------------------------------------
 
@@ -94,10 +93,9 @@ CREATE TABLE `don_hang` (
 --
 
 INSERT INTO `don_hang` (`ma_don`, `user`, `date`, `tinh_trang`, `ho_va_ten`, `So_dien_thoai`, `email`, `Dia_chi`, `note`) VALUES
-(509, 'trong249', '2021-11-21', 2, 'nguyễn văn trọng', '0123456789', 'trong@gmail.com', 'Ho Chi Minh', 'Giao hang can than nha !'),
-(424, 'admin', '2021-11-21', 4, 'Admin ', '0123456789', 'admin@gmail.com', 'Ho Chi Minh', 'ngon ngon'),
+(424, 'admin', '2021-11-21', 2, 'Admin ', '0123456789', 'admin@gmail.com', 'Ho Chi Minh', 'ngon ngon'),
 (198, 'admin', '2021-11-21', 1, 'con ga con', '0123456789', 'gacon@gmail.com', 'Ho Chi Minh', 'Qua it tien '),
-(289, 'superIdol', '2021-11-21', 4, 'Super IDol', '0123456789', 'idol@gmail.com', 'Ho Chi Minh', 'haha');
+(289, 'superIdol', '2021-11-21', 1, 'Super IDol', '0123456789', 'idol@gmail.com', 'Ho Chi Minh', 'haha');
 
 -- --------------------------------------------------------
 
@@ -226,9 +224,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userID`, `username`, `email`, `mat_khau`, `dia_chi`, `vai_tro`, `reset_code`) VALUES
 (1, 'admin', 'admin@gmail.com', '$2y$10$6apH74nHMZnlDgig0IUUue3NUAKUWfT0OQ5xXCCA.ZTL/qZlVg.xq', 'Hồ Chí Minh', 1, 0),
-(2, 'trong24', 'trong24@gmail.com', '$2y$10$ALQhK28DUJNFcN7ZxvdvcuLt3uUDe.rwRbPEBK5m7dRBcmnBWhmza', 'Hồ Chí Minh', 0, 0),
-(3, 'superIdol', 'cat.tran03@hcmut.edu.vn', '$2y$10$oZ5nCDx6d.VNjvuxhA2x3.iDuGvPastW/Rnyhe9KXLMFng5nCeIyO', 'Sao kim', 0, 0),
-(0, 'trong249', 'trong249@gmail.com', '$2y$10$eGJfqjpmr9Al29UelhmKeOAzkFgE3aE5lrLmAf8IHL9SFb3VQQ01y', 'Hồ Chí Minh', 0, 0);
+(2, 'superIdol', 'cat.tran03@hcmut.edu.vn', '$2y$10$oZ5nCDx6d.VNjvuxhA2x3.iDuGvPastW/Rnyhe9KXLMFng5nCeIyO', 'Sao kim', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -241,6 +237,12 @@ ALTER TABLE `brand`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -249,6 +251,12 @@ ALTER TABLE `brand`
 --
 ALTER TABLE `brand`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

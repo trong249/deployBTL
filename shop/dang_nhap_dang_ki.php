@@ -18,7 +18,7 @@ function consolelog($message) {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
         <link href="../css/dang_nhap_dang_ki/dang_nhap_dang_ki.css" rel="stylesheet">
-        
+        <link rel="icon" href="../img/gioi_thieu/tachnen.png" type="image/x-icon">
     </head>
     <body>
     <script>
@@ -584,6 +584,15 @@ function consolelog($message) {
                     reportErrorEmail(id, invalid_location);
                 })
 
+                function isValidJSONString(str) {
+                    try {
+                        JSON.parse(str);
+                    } catch (e) {
+                        return false;
+                    }
+                    return true;
+                }
+
                 $("form").eq(2).submit(function(e) {
                     console.log("Prevent form submit success!");
                     e.preventDefault();
@@ -597,6 +606,13 @@ function consolelog($message) {
                         },
                         function(returnData, status) {
                             console.log(returnData);
+                            if (!isValidJSONString(returnData)) {
+                                var alertbox = $("<div></div>").text("Có lỗi xảy ra! Chúng tôi không thể gửi email tới bạn. Vui lòng thử lại sau").addClass("alert alert-danger");
+                                console.log(alertbox);
+                                console.log($(".container-fluid").eq(2));
+                                $(".container-fluid").eq(2).append(alertbox).find("form").remove();
+                                return;
+                            }
                             result = JSON.parse(returnData)
                             console.log(result);
                             if (result["error_email"] != "") {
