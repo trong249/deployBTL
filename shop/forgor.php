@@ -28,7 +28,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //setup a connection
-        $hostname = "mysql.site4now.net";
+        $hostname = "mysql5037.site4now.net";
     $username = "a7cc8e_dapoet1";
     $password = "123456aA@";
     $database = "db_a7cc8e_dapoet1";
